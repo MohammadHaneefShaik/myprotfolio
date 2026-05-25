@@ -1,0 +1,228 @@
+/* ================================= */
+/* Hero Visual — Animated Terminal    */
+/* ================================= */
+
+.hero-visual {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 350px;
+}
+
+/* Glowing orb behind terminal */
+.hero-glow {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.25), rgba(99, 102, 241, 0.1), transparent 70%);
+  filter: blur(40px);
+  animation: pulseGlow 4s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.2); opacity: 1; }
+}
+
+/* Terminal window */
+.hero-terminal {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 420px;
+  background: rgba(10, 6, 22, 0.9);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 0 60px rgba(168, 85, 247, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Terminal header with traffic light dots */
+.terminal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: rgba(20, 14, 40, 0.8);
+  border-bottom: 1px solid rgba(168, 85, 247, 0.1);
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 7px;
+}
+
+.dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+
+.dot-red { background: #ef4444; }
+.dot-yellow { background: #fbbf24; }
+.dot-green { background: #22c55e; }
+
+.terminal-title {
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.5px;
+}
+
+/* Terminal body — code area */
+.terminal-body {
+  padding: 16px 18px;
+  font-family: "JetBrains Mono", "Fira Code", "Courier New", monospace;
+  font-size: 0.8rem;
+  line-height: 1.7;
+  min-height: 260px;
+}
+
+/* Individual code line */
+.code-line {
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.code-line.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.line-number {
+  display: inline-block;
+  width: 24px;
+  text-align: right;
+  margin-right: 14px;
+  color: rgba(255, 255, 255, 0.15);
+  font-size: 0.7rem;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+/* Blinking cursor */
+.cursor-blink {
+  color: #a855f7;
+  animation: blink 1s step-end infinite;
+  margin-left: 2px;
+  font-weight: 300;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Floating tech badges */
+.floating-badge {
+  position: absolute;
+  z-index: 2;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: rgba(15, 10, 30, 0.85);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.badge-1 {
+  top: 5%;
+  right: -5%;
+  animation: floatBadge 6s ease-in-out infinite;
+}
+
+.badge-2 {
+  bottom: 15%;
+  left: -8%;
+  animation: floatBadge 6s ease-in-out infinite 1s;
+}
+
+.badge-3 {
+  bottom: 5%;
+  right: 0%;
+  animation: floatBadge 6s ease-in-out infinite 2s;
+}
+
+@keyframes floatBadge {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* --------- */
+/* Responsive */
+/* --------- */
+@media (max-width: 767px) {
+  .hero-visual {
+    min-height: 280px;
+    margin-top: 20px;
+  }
+
+  .hero-terminal {
+    max-width: 340px;
+  }
+
+  .terminal-body {
+    padding: 12px 14px;
+    font-size: 0.7rem;
+    min-height: 220px;
+  }
+
+  .hero-glow {
+    width: 200px;
+    height: 200px;
+  }
+
+  .floating-badge {
+    font-size: 0.65rem;
+    padding: 4px 10px;
+  }
+
+  .badge-1 { right: 0%; top: 0%; }
+  .badge-2 { left: 0%; }
+  .badge-3 { right: 5%; }
+}
+
+@media (max-width: 480px) {
+  .hero-terminal {
+    max-width: 100%;
+  }
+
+  .terminal-body {
+    font-size: 0.65rem;
+    min-height: 200px;
+    padding: 10px 10px;
+  }
+
+  .line-number {
+    width: 18px;
+    margin-right: 8px;
+    font-size: 0.6rem;
+  }
+
+  .floating-badge {
+    display: none;
+  }
+
+  .hero-glow {
+    width: 160px;
+    height: 160px;
+  }
+}
