@@ -150,6 +150,7 @@ function Projects() {
               }
               description=" Food Ordering System is a web/mobile application that allows users to browse restaurants, select food items, and place orders online. The system simplifies the ordering process, providing a fast and convenient way for customers while helping restaurants manage orders efficiently."
               ghLink="https://github.com/MohammadHaneefShaik/FoodOrderingwebsite"
+              demoLink="https://hungryexpress.onrender.com/"
             />
           </Col>
 
