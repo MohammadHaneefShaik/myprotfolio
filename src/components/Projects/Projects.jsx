@@ -86,7 +86,7 @@ function Projects() {
               description="AI-Buddy 🤖 – A secure, modern MERN stack chatbot using Google Gemini API, with JWT-based authentication,
                chat history in MongoDB, and a responsive React + Vite + Material UI interface."
               ghLink="https://github.com/MohammadHaneefShaik/Ai-Buddy"
-              demoLink="https://ai-chat-bot-cauj.onrender.com/"
+              demoLink="https://aibuddychat.vercel.app/"
             />
           </Col>
           {/*
