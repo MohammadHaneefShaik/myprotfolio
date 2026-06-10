@@ -39,7 +39,7 @@ function Projects() {
                 </span>
               }
               description="BlockPay 💳 is a blockchain-based payment platform built using React, Node.js, MongoDB, Solidity, and FastAPI. It features secure crypto transactions, wallet integration, JWT authentication, and smart contract powered payment verification."
-              ghLink="https://github.com/MohammadHaneefShaik"
+             /* ghLink="https://github.com/MohammadHaneefShaik"*/
               demoLink="https://blockpay-web.vercel.app"
             />
           </Col>
@@ -61,7 +61,7 @@ function Projects() {
                 </span>
               }
               description="Trackify 🚍 is a real-time college bus tracking system inspired by live transit apps. It provides live bus movement updates, stop-based tracking, estimated arrival timings, and a smooth responsive UI for students and administrators."
-              ghLink="https://github.com/MohammadHaneefShaik/Trackify"
+             /* ghLink="https://github.com/MohammadHaneefShaik/Trackify"*/
               demoLink="https://trackify-app.azurewebsites.net"
 
             />
@@ -85,7 +85,7 @@ function Projects() {
 
               description="AI-Buddy 🤖 – A secure, modern MERN stack chatbot using Google Gemini API, with JWT-based authentication,
                chat history in MongoDB, and a responsive React + Vite + Material UI interface."
-              ghLink="https://github.com/MohammadHaneefShaik/Ai-Buddy"
+              /*ghLink="https://github.com/MohammadHaneefShaik/Ai-Buddy"*/
               demoLink="https://aibuddychat.vercel.app/"
             />
           </Col>
@@ -129,7 +129,7 @@ function Projects() {
                 </span>
               }
               description="Digital Doctor 🏥 is an AI-powered healthcare assistance platform that helps users with symptom analysis, health guidance, appointment management, and medical support through a modern responsive web interface. Built using the MERN stack with secure authentication and intelligent chatbot integration."
-              ghLink="https://github.com/MohammadHaneefShaik/Digital-Doctor"
+              /*ghLink="https://github.com/MohammadHaneefShaik/Digital-Doctor"*/
               demoLink="https://digital-doctor-three.vercel.app/"
             />
           </Col>
@@ -149,7 +149,7 @@ function Projects() {
                 </span>
               }
               description=" Food Ordering System is a web/mobile application that allows users to browse restaurants, select food items, and place orders online. The system simplifies the ordering process, providing a fast and convenient way for customers while helping restaurants manage orders efficiently."
-              ghLink="https://github.com/MohammadHaneefShaik/FoodOrderingwebsite"
+             /* ghLink="https://github.com/MohammadHaneefShaik/FoodOrderingwebsite"*/
               demoLink="https://hungryexpress.onrender.com/"
             />
           </Col>
